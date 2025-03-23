@@ -1,8 +1,15 @@
+# Core UI + Models
 streamlit
-ultralytics>=8.2.0
-opencv-python
+ultralytics>=8.3.91
+torch>=2.2.0
+opencv-python-headless
 pytesseract
 pyyaml
-torch>=2.2.0
 aiohttp
 requests
+
+# Optional if needed for your app
+# matplotlib
+# pandas
+# flask
+# scikit-learn
