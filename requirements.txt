@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 streamlit
 ultralytics>=8.3.91
 torch>=2.2.0
@@ -6,3 +7,20 @@ pytesseract
 pyyaml
 aiohttp
 requests
+=======
+# Core UI + Models
+streamlit
+ultralytics>=8.3.91
+torch>=2.2.0
+opencv-python-headless
+pytesseract
+pyyaml
+aiohttp
+requests
+
+# Optional if needed for your app
+# matplotlib
+# pandas
+# flask
+# scikit-learn
+>>>>>>> 4646fcdf5d03ed23d399bd3fa7799378c69c2cc2
