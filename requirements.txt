@@ -20,7 +20,7 @@ webdriver-manager==4.0.1  # Auto-updates ChromeDriver for Selenium
 
 # Machine Learning & AI Model Training
 ultralytics==8.3.91  # YOLOv8 training
-torch==2.0.1  # Fixes conflict with torchvision
+torch  # let pip install a compatible version (usually 2.2+)
 torchvision==0.15.2  # Compatible with torch 2.0.1
 scikit-learn==1.4.0
 statsmodels==0.14.1
