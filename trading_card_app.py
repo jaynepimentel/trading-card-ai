@@ -27,6 +27,10 @@ if uploaded_file:
     st.subheader("🔍 Auto Classification")
     predictions = run_multi_infer(MODEL_PATH, image_path)
     class_id = verify_best_class(predictions, uploaded_file.name, CLASS_NAMES)
+
+if class_id is None:
+    st.error("❌ No confident prediction was made by the model.")
+else:
     st.success(f"Predicted Class: {CLASS_NAMES[class_id]}")
 
     st.subheader("🔡 OCR Extraction")
