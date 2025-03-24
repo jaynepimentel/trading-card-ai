@@ -8,7 +8,7 @@ from generate_listings import generate_listing
 from rank_listings_llm import rank_listings
 from crowd_feedback_loop import record_correction
 
-MODEL_PATH = "models/parallel_detector_v1.pt"
+MODEL_PATH = "detect/train17/weights/best.pt"
 DATA_YAML = "datasets/train.yaml"
 CLASS_NAMES = load_classes_from_yaml(DATA_YAML)
 
