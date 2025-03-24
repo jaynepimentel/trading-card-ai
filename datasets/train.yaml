@@ -1,0 +1,20 @@
+# YOLO Dataset Config
+path: datasets
+train: train/images
+val: val/images
+test: test/images
+
+# Classes
+nc: 82  # ✅ Updated class count to match yolo.yaml
+names: [
+  "Refractor", "Prizm", "ChromeBase", "Red", "Blue", "Gold", "Green", "Orange", "Purple", "Pink", "Black",
+  "Aqua", "NeonGreen", "NeonPink", "CarolinaBlue", "AtomicRefractor", "XFractor", "Mojo", "Shimmer", "Shock",
+  "CrackedIce", "Ice", "Checkerboard", "Choice", "Wave", "Velocity", "RayWave", "Flash", "Mirror", "Canvas",
+  "Foil", "RainbowFoil", "Disco", "Scope", "Pulsar", "Hyper", "Crystals", "FastBreak", "NoHuddle", "Zebra",
+  "Tiger", "Elephant", "Snakeskin", "TieDye", "Nebula", "Fusion", "Galactic", "StainedGlass", "Lava", "PMG",
+  "BlackPandora", "ColorBlast", "Downtown", "FOTLShimmer", "Manga", "Sepia", "Negative", "Prism Refractor",
+  "X-Fractor", "Ray Wave", "Speckle", "Rose Gold", "Aqua Lava", "Tidal Wave", "Base Image Variations",
+  "Silver Prizm", "White Sparkle Prizm", "Tie-Dye Prizm", "Snakeskin Prizm", "Zebra Stripe Prizm",
+  "Elephant Prizm", "Black Galaxy Prizm", "Gold Vinyl Prizm", "Black Finite Prizm", "Light Blue Prizm",
+  "Tri Color", "Zebra", "Tie Dye", "Holo", "Pink Velocity", "Black Pandora", "Acetate"
+]
