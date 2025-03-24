@@ -1,10 +1,9 @@
 streamlit
-ultralytics>=8.3.91
-torch>=2.2.0
+ultralytics==8.0.20
+torch==2.2.0
+numpy==1.24.4
+opencv-python-headless==4.7.0.72
 pytesseract
 pyyaml
 aiohttp
 requests
-opencv-python-headless
-# block cv2 desktop version that breaks cloud deployments
-opencv-python==4.6.0.66  # older version to satisfy deps
