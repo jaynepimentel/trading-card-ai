@@ -1,8 +1,8 @@
 streamlit
-ultralytics==8.0.20
+ultralytics==8.3.94
 torch==2.2.0
-numpy==1.24.4
-opencv-python-headless==4.7.0.72
+numpy==1.26.4
+opencv-python-headless==4.9.0.80
 pytesseract
 pyyaml
 aiohttp
