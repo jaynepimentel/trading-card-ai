@@ -17,9 +17,10 @@ st.set_page_config(page_title="Trading Card AI", layout="centered")
 st.title("🧠 Trading Card AI")
 
 uploaded_file = st.file_uploader("Upload a card image", type=["jpg", "png"])
+class_id = None  # Ensures it's defined before use
 
 if uploaded_file:
-    st.image(uploaded_file, caption="Uploaded Card", use_column_width=True)
+    st.image(uploaded_file, caption="Uploaded Card", use_container_width=True)  # Modern width usage
     image_path = f"temp_{uploaded_file.name}"
     with open(image_path, "wb") as f:
         f.write(uploaded_file.getvalue())
