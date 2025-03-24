@@ -1,4 +1,3 @@
-
 from ultralytics import YOLO
 import cv2
 import numpy as np
@@ -17,13 +16,25 @@ def augment_image(image, index):
 def run_multi_infer(model_path, image_path, n=5):
     model = YOLO(model_path)
     image = cv2.imread(image_path)
+
+    if image is None:
+        raise ValueError(f"❌ Could not load image: {image_path}")
+
     class_votes = {}
 
     for i in range(n):
         aug_img = augment_image(image.copy(), i)
-        result = model.predict(aug_img, imgsz=640, conf=0.25)[0]
+        results = model.predict(aug_img, imgsz=640, conf=0.10)  # lowered conf threshold
+        result = results[0]
+
+        if not hasattr(result, "boxes") or len(result.boxes) == 0:
+            continue  # skip if no detections
+
         for box in result.boxes:
             class_id = int(box.cls.item())
             class_votes[class_id] = class_votes.get(class_id, 0) + 1
+
+    if not class_votes:
+        print("⚠️ No predictions were confident enough to count.")
 
     return sorted(class_votes.items(), key=lambda x: x[1], reverse=True)
